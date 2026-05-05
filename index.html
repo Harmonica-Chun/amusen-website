@@ -443,6 +443,92 @@
     .footer-links a { font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:var(--teal-soft); text-decoration:none; transition:color 0.3s; }
     .footer-links a:hover { color:var(--teal); }
 
+    /* ════ VIDEO SHOWCASE ════ */
+    #video-showcase {
+      background: linear-gradient(135deg, var(--ocean-dark) 0%, #0a1f3a 50%, var(--ocean-mid) 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #video-showcase::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,220,240,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,220,240,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .video-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 80px 0;
+    }
+
+    .video-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .video-header .section-label {
+      color: var(--teal);
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .video-header h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(28px, 4.5vw, 44px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .video-header h2 span {
+      color: var(--teal);
+    }
+
+    .video-header p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,220,240,0.15);
+      border: 1px solid rgba(0,220,240,0.2);
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
     /* ════ RESPONSIVE ════ */
     @media (max-width: 900px) {
       .contact-top { grid-template-columns: 1fr 1fr; }
@@ -525,6 +611,20 @@
           <h3>Creative Consulting</h3>
           <p>Strategic ideation and roadmapping for tech-forward brands ready to lead their industries into the future.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SHOWCASE -->
+  <section id="video-showcase">
+    <div class="video-container">
+      <div class="video-header">
+        <div class="section-label">Experience Our Work</div>
+        <h2>See Innovation in <span>Action</span></h2>
+        <p>Explore how we blend technology and creativity to shape tomorrow's experiences</p>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://drive.google.com/file/d/1LWqIHFg883nGhOjTjT6XQwtewEeLu-ti/preview" allow="autoplay; loop"></iframe>
       </div>
     </div>
   </section>
