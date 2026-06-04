@@ -1,0 +1,45 @@
+<svg width="580" height="200" viewBox="0 0 580 200" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Red rounded square icon background -->
+  <rect x="20" y="25" width="150" height="150" rx="32" fill="#C0392B"/>
+
+  <!-- SPANNER: angled from top-right to bottom-left (rotate 135deg) -->
+  <!-- Drawn flat on horizontal axis then rotated -->
+  <g transform="translate(95,100) rotate(135)">
+    <!-- Open ring head (left side) -->
+    <circle cx="-34" cy="0" r="16" fill="white"/>
+    <circle cx="-34" cy="0" r="8" fill="#C0392B"/>
+    <!-- Jaw notch cut into head -->
+    <rect x="-50" y="-5" width="20" height="10" fill="#C0392B"/>
+    <!-- Handle bar -->
+    <rect x="-18" y="-5" width="62" height="10" rx="5" fill="white"/>
+    <!-- Flat foot end -->
+    <rect x="44" y="-7" width="14" height="14" rx="3" fill="white"/>
+  </g>
+
+  <!-- SCREWDRIVER: angled from top-left to bottom-right (rotate 45deg), drawn ON TOP -->
+  <g transform="translate(95,100) rotate(45)">
+    <!-- Handle (wider, rounded rect) -->
+    <rect x="16" y="-10" width="38" height="20" rx="7" fill="white"/>
+    <!-- Neck (slight taper, thin rect) -->
+    <rect x="2" y="-5" width="16" height="10" rx="3" fill="white"/>
+    <!-- Shaft (long thin) -->
+    <rect x="-50" y="-4" width="54" height="8" rx="4" fill="white"/>
+    <!-- Flat tip -->
+    <rect x="-56" y="-6" width="8" height="12" rx="1" fill="white"/>
+  </g>
+
+  <!-- WORDMARK: Fix in red, It in white -->
+  <text x="190" y="122" font-family="Arial Black, sans-serif" font-size="76" font-weight="900" fill="#C0392B">Fix</text>
+  <text x="345" y="122" font-family="Arial Black, sans-serif" font-size="76" font-weight="900" fill="#ffffff">It</text>
+
+  <!-- Tagline -->
+  <text x="191" y="153" font-family="Arial, sans-serif" font-size="12" fill="#888888" letter-spacing="3">FACILITY MANAGEMENT PWA</text>
+
+  <!-- Divider -->
+  <line x1="20" y1="172" x2="560" y2="172" stroke="#555555" stroke-width="0.5"/>
+
+  <!-- Brand line -->
+  <text x="290" y="192" font-family="Arial, sans-serif" font-size="11" fill="#888888" text-anchor="middle" letter-spacing="2">REPORT · TRACK · RESOLVE</text>
+
+</svg>
