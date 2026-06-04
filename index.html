@@ -227,6 +227,281 @@ footer{padding:30px 52px;border-top:.5px solid rgba(0,220,240,.1);display:flex;a
 .footer-links a{font-family:var(--orb);font-size:7.5px;letter-spacing:.14em;color:var(--w25);transition:color .2s}
 .footer-links a:hover{color:var(--teal)}
 
+/* ---- FixIt Hero ---- */
+#products{
+  position:relative;
+  padding:0;
+  overflow:hidden;
+  background:var(--bg);
+}
+.fxt-wrap{
+  max-width:1180px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  min-height:100vh;
+  padding:100px 40px;
+  gap:60px;
+  position:relative;
+  z-index:2;
+}
+#products::before{
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background:linear-gradient(135deg,
+    rgba(192,57,43,0.18) 0%,
+    transparent 50%,
+    rgba(192,57,43,0.06) 100%);
+  z-index:0;
+}
+#products::after{
+  content:'';
+  position:absolute;
+  top:-10%;
+  left:-5%;
+  width:55%;
+  height:130%;
+  background:rgba(192,57,43,0.07);
+  transform:skewX(-8deg);
+  z-index:0;
+}
+.fxt-bar{
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:5px;
+  background:linear-gradient(to bottom,transparent,#C0392B,#E74C3C,transparent);
+  z-index:3;
+}
+.fxt-left{ position:relative; z-index:2; }
+.fxt-eyebrow{
+  font-family:var(--orb);
+  font-size:11px;
+  letter-spacing:.25em;
+  color:var(--teal);
+  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.fxt-eyebrow::before{
+  content:'';
+  display:block;
+  width:32px;
+  height:1px;
+  background:var(--teal);
+}
+.fxt-logo-row{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:24px;
+}
+.fxt-icon{
+  width:64px;
+  height:64px;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 0 32px rgba(192,57,43,0.5);
+  flex-shrink:0;
+}
+.fxt-icon img{ width:100%; height:100%; object-fit:cover; }
+.fxt-brand{
+  font-family:var(--orb);
+  font-size:52px;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:-.02em;
+}
+.fxt-brand span:first-child{ color:#C0392B; }
+.fxt-brand span:last-child{ color:#ffffff; }
+.fxt-sub{
+  font-family:var(--orb);
+  font-size:13px;
+  color:var(--teal);
+  letter-spacing:.15em;
+  margin-bottom:28px;
+  margin-left:82px;
+}
+.fxt-desc{
+  font-size:16px;
+  line-height:1.75;
+  color:var(--w60);
+  margin-bottom:36px;
+  max-width:480px;
+}
+.fxt-pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:40px;
+}
+.fxt-pill{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 16px;
+  border:1px solid rgba(192,57,43,0.35);
+  border-radius:100px;
+  font-size:13px;
+  color:var(--w60);
+  background:rgba(192,57,43,0.07);
+  transition:all .3s;
+}
+.fxt-pill:hover{
+  border-color:#C0392B;
+  color:#fff;
+  background:rgba(192,57,43,0.15);
+}
+.fxt-pill-dot{
+  width:6px; height:6px;
+  border-radius:50%;
+  background:#C0392B;
+  flex-shrink:0;
+}
+.fxt-btns{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.fxt-btn-primary{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:15px 32px;
+  background:#C0392B;
+  color:#fff;
+  font-family:var(--orb);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.1em;
+  border-radius:6px;
+  text-decoration:none;
+  transition:all .3s;
+  box-shadow:0 0 24px rgba(192,57,43,0.4);
+}
+.fxt-btn-primary:hover{
+  background:#E74C3C;
+  box-shadow:0 0 40px rgba(192,57,43,0.7);
+  transform:translateY(-2px);
+}
+.fxt-btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:15px 32px;
+  border:1px solid rgba(255,255,255,0.2);
+  color:var(--w60);
+  font-family:var(--orb);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.1em;
+  border-radius:6px;
+  text-decoration:none;
+  transition:all .3s;
+}
+.fxt-btn-secondary:hover{
+  border-color:#fff;
+  color:#fff;
+  transform:translateY(-2px);
+}
+.fxt-right{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:620px;
+}
+.fxt-phones{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.fxt-phone{
+  position:absolute;
+  border-radius:36px;
+  overflow:hidden;
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,0.12),
+    0 32px 80px rgba(0,0,0,0.7),
+    0 0 60px rgba(192,57,43,0.15);
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+.fxt-phone:hover{
+  transform:translateY(-12px) scale(1.03) !important;
+  box-shadow:
+    0 0 0 2px rgba(192,57,43,0.6),
+    0 40px 100px rgba(0,0,0,0.8),
+    0 0 80px rgba(192,57,43,0.35);
+  z-index:10 !important;
+}
+.fxt-phone img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.fxt-phone-left{
+  width:185px; height:370px;
+  left:0; top:50%;
+  transform:translateY(-50%) rotate(-8deg);
+  z-index:1;
+  opacity:.85;
+}
+.fxt-phone-center{
+  width:210px; height:420px;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%) rotate(0deg);
+  z-index:3;
+}
+.fxt-phone-right{
+  width:185px; height:370px;
+  right:0; top:50%;
+  transform:translateY(-50%) rotate(8deg);
+  z-index:1;
+  opacity:.85;
+}
+.fxt-glow{
+  position:absolute;
+  bottom:0; left:50%;
+  transform:translateX(-50%);
+  width:300px; height:80px;
+  background:radial-gradient(ellipse,rgba(192,57,43,0.35) 0%,transparent 70%);
+  filter:blur(20px);
+  z-index:0;
+}
+.fxt-stats{
+  display:flex;
+  gap:32px;
+  margin-bottom:40px;
+}
+.fxt-stat-num{
+  font-family:var(--orb);
+  font-size:28px;
+  font-weight:900;
+  color:#C0392B;
+  line-height:1;
+}
+.fxt-stat-label{
+  font-size:11px;
+  color:var(--w40);
+  letter-spacing:.1em;
+  margin-top:4px;
+}
+@media(max-width:900px){
+  .fxt-wrap{
+    grid-template-columns:1fr;
+    padding:80px 24px;
+    min-height:auto;
+  }
+  .fxt-right{ height:400px; }
+  .fxt-phone-left{ width:130px; height:260px; }
+  .fxt-phone-center{ width:155px; height:310px; }
+  .fxt-phone-right{ width:130px; height:260px; }
+}
+
 /* ─── KEYFRAMES ─── */
 @keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes scanline{0%{top:-2px}100%{top:102%}}
@@ -449,36 +724,86 @@ footer{padding:30px 52px;border-top:.5px solid rgba(0,220,240,.1);display:flex;a
 
 <!-- ── PRODUCTS ── -->
 <section id="products">
-  <div class="section-inner">
-    <div id="prd-hdr" style="margin-bottom:56px">
-      <div class="section-line" id="prd-line"></div>
-      <div class="section-tag">WHAT WE BUILD</div>
-      <h2 class="section-heading">Our Products</h2>
-      <p class="section-sub">Real-world software built for Malaysian businesses and beyond.</p>
-    </div>
-    <div class="products-grid">
-      <div class="product-card" id="prd-fixit">
-        <div class="pc-left">
-          <img src="fixit-logo.svg" alt="FixIt Logo" style="height:60px; margin-bottom:20px;">
-          <span class="pc-badge">PWA · SAAS</span>
-          <h3 class="pc-title">FixIt</h3>
-          <div class="pc-subtitle">Facility Management PWA</div>
-          <p class="pc-desc">FixIt replaces messy WhatsApp groups with a structured photo-documented complaint system for malls, hotels, factories and property managers in Malaysia.</p>
+  <div class="fxt-bar"></div>
+  <div class="fxt-wrap">
+
+    <!-- LEFT: Content -->
+    <div class="fxt-left">
+      <p class="fxt-eyebrow">OUR PRODUCTS</p>
+
+      <div class="fxt-logo-row">
+        <div class="fxt-icon">
+          <img src="fixit-logo.svg" alt="FixIt icon"/>
         </div>
-        <div class="pc-right">
-          <ul class="pc-bullets">
-            <li>AI-powered classification</li>
-            <li>Photo evidence</li>
-            <li>Real-time notifications and admin dashboard</li>
-            <li>Multilingual English / Bahasa Malaysia / Chinese</li>
-          </ul>
-          <div class="pc-btns">
-            <a href="https://fixit-pwa.vercel.app" target="_blank" class="btn-primary">TRY THE DEMO</a>
-            <a href="#contact" class="btn-outline">GET IN TOUCH</a>
-          </div>
+        <div class="fxt-brand">
+          <span>Fix</span><span>It</span>
         </div>
       </div>
+      <p class="fxt-sub">FACILITY MANAGEMENT PWA</p>
+
+      <!-- Stats -->
+      <div class="fxt-stats">
+        <div>
+          <div class="fxt-stat-num">3</div>
+          <div class="fxt-stat-label">USER ROLES</div>
+        </div>
+        <div>
+          <div class="fxt-stat-num">AI</div>
+          <div class="fxt-stat-label">POWERED</div>
+        </div>
+        <div>
+          <div class="fxt-stat-num">3x</div>
+          <div class="fxt-stat-label">LANGUAGES</div>
+        </div>
+        <div>
+          <div class="fxt-stat-num">24/7</div>
+          <div class="fxt-stat-label">TRACKING</div>
+        </div>
+      </div>
+
+      <p class="fxt-desc">
+        Say goodbye to messy WhatsApp groups and missed complaints.
+        FixIt gives malls, hotels, factories and property managers
+        a structured, photo-documented system to report, track and
+        resolve facility issues — with full audit trails built for
+        compliance.
+      </p>
+
+      <div class="fxt-pills">
+        <div class="fxt-pill"><span class="fxt-pill-dot"></span>AI-powered classification</div>
+        <div class="fxt-pill"><span class="fxt-pill-dot"></span>Photo evidence</div>
+        <div class="fxt-pill"><span class="fxt-pill-dot"></span>Real-time notifications</div>
+        <div class="fxt-pill"><span class="fxt-pill-dot"></span>Admin dashboard</div>
+        <div class="fxt-pill"><span class="fxt-pill-dot"></span>EN · BM · 中文</div>
+        <div class="fxt-pill"><span class="fxt-pill-dot"></span>Strata Act compliant</div>
+      </div>
+
+      <div class="fxt-btns">
+        <a href="https://fixit-pwa.vercel.app" target="_blank" class="fxt-btn-primary">
+          TRY THE DEMO →
+        </a>
+        <a href="#contact" class="fxt-btn-secondary">
+          GET IN TOUCH
+        </a>
+      </div>
     </div>
+
+    <!-- RIGHT: Phone mockups -->
+    <div class="fxt-right">
+      <div class="fxt-phones">
+        <div class="fxt-phone fxt-phone-left">
+          <img src="fixit-login.jpg" alt="FixIt login screen"/>
+        </div>
+        <div class="fxt-phone fxt-phone-center">
+          <img src="fixit-home.jpg" alt="FixIt home screen"/>
+        </div>
+        <div class="fxt-phone fxt-phone-right">
+          <img src="fixit-submit.jpg" alt="FixIt submit complaint screen"/>
+        </div>
+        <div class="fxt-glow"></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
