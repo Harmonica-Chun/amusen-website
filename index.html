@@ -538,10 +538,9 @@ footer{padding:30px 52px;border-top:.5px solid rgba(0,220,240,.1);display:flex;a
 @media(max-width:768px){
   #products{margin-top:60px}
   .fxt-wrap{grid-template-columns:1fr;padding:100px 20px}
-  .fxt-phone-left,.fxt-phone-right{display:none}
-  .fxt-phone-center{position:relative !important;width:85% !important;height:auto !important;left:auto !important;top:auto !important;transform:none !important;margin:0 auto !important;display:block !important}
-  .fxt-right{position:relative !important;width:100% !important;height:auto !important;max-width:100% !important;margin-top:40px !important}
-  .fxt-phones{position:relative;display:flex;justify-content:center;align-items:center}
+  .fxt-right{position:relative !important;width:100% !important;height:auto !important;margin-top:40px !important}
+  .fxt-phones{position:relative !important;display:flex !important;flex-direction:column !important;align-items:center !important;gap:20px !important;width:100% !important}
+  .fxt-phone-left,.fxt-phone-center,.fxt-phone-right{position:relative !important;width:80% !important;height:auto !important;left:auto !important;top:auto !important;transform:none !important;opacity:1 !important;display:block !important}
   .fxt-brand{font-size:40px}
   .fxt-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 }
