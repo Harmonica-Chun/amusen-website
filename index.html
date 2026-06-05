@@ -539,8 +539,9 @@ footer{padding:30px 52px;border-top:.5px solid rgba(0,220,240,.1);display:flex;a
   #products{margin-top:60px}
   .fxt-wrap{grid-template-columns:1fr;padding:100px 20px}
   .fxt-right{position:relative !important;width:100% !important;height:auto !important;margin-top:40px !important}
-  .fxt-phones{position:relative !important;display:flex !important;flex-direction:column !important;align-items:center !important;gap:20px !important;width:100% !important}
-  .fxt-phone-left,.fxt-phone-center,.fxt-phone-right{position:relative !important;width:80% !important;height:auto !important;left:auto !important;top:auto !important;transform:none !important;opacity:1 !important;display:block !important}
+  .fxt-phones{position:relative !important;display:flex !important;flex-direction:row !important;overflow-x:auto !important;overflow-y:visible !important;gap:16px !important;padding:20px 24px !important;width:100% !important;scroll-snap-type:x mandatory !important;-webkit-overflow-scrolling:touch !important}
+  .fxt-phone-left,.fxt-phone-center,.fxt-phone-right{position:relative !important;width:200px !important;height:400px !important;left:auto !important;top:auto !important;transform:none !important;opacity:1 !important;display:block !important;flex-shrink:0 !important;scroll-snap-align:center !important}
+  .fxt-glow{display:none !important}
   .fxt-brand{font-size:40px}
   .fxt-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 }
