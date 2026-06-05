@@ -18,8 +18,8 @@
   --orb:'Orbitron',monospace;--exo:'Exo 2',sans-serif;
   --r-lg:12px;--r-md:8px;--r-sm:4px;
 }
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--w);font-family:var(--exo);font-weight:300;overflow-x:hidden;cursor:none}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
+body{background:var(--bg);color:var(--w);font-family:var(--exo);font-weight:300;overflow-x:hidden;max-width:100%;cursor:none}
 body::before{
   content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   background-image:linear-gradient(rgba(0,220,240,.018) 1px,transparent 1px),
@@ -243,6 +243,7 @@ footer{padding:30px 52px;border-top:.5px solid rgba(0,220,240,.1);display:flex;a
 }
 .fxt-wrap{
   max-width:1180px;
+  width:100%;
   margin:0 auto;
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -320,6 +321,7 @@ footer{padding:30px 52px;border-top:.5px solid rgba(0,220,240,.1);display:flex;a
   font-weight:900;
   line-height:1;
   letter-spacing:-.02em;
+  max-width:100%;
 }
 .fxt-brand span:first-child{ color:#C0392B; }
 .fxt-brand span:last-child{ color:#ffffff; }
@@ -420,6 +422,8 @@ footer{padding:30px 52px;border-top:.5px solid rgba(0,220,240,.1);display:flex;a
   align-items:center;
   justify-content:center;
   height:620px;
+  max-width:100%;
+  overflow:hidden;
 }
 .fxt-phones{
   position:relative;
